@@ -1,0 +1,178 @@
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --Very-light-gray:hsl(0, 0%, 95%); /* backgrounds, headings and buttons */
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+button {
+  margin: 0;
+}
+h1{
+  text-transform: uppercase;
+  color:var( --Very-light-gray);
+  font-family:'Big Shoulder Display' ;
+  /* margin:15px 0px; */
+}
+p{
+  color:var(--Transparent-white);
+  font-family:'Lexend deca';
+  /* margin:10px 0px; */
+  font-size: 15px;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family:'Big Shoulder Display' ;
+    src: url('font/BigShouldersDisplay-Bold.ttf');
+}
+@font-face {
+    font-family:'Lexend deca' ;
+    src: url('font/LexendDeca-Regular.ttf');
+}
+
+/* Set core body defaults */
+.attribution { 
+
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
+body {
+   
+    background-color:var(--Very-light-gray);
+}
+
+.container{
+display:flex;
+align-items: center;
+justify-content: center;
+width:100%;
+min-height: 100vh;   
+}
+
+.box{
+  max-width: 270px;
+  height:400px;
+  box-sizing: border-box;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items:flex-start;
+  padding:30px;
+  border:none;
+  /* padding:40px; */
+}
+.box:nth-child(1){
+  background-color: var(--Bright-orange);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  }
+.box:nth-child(2){
+  background-color: var(--Dark-cyan);
+  }
+
+.box:nth-child(3){
+  background-color: var(--Very-dark-cyan);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  
+  }
+
+  button{
+    padding:15px;
+    border: none;
+    background-color: var(--Very-light-gray);
+    font-family:'Lexend deca';
+    text-transform: capitalize;
+    width:150px;
+    border-radius: 25px;
+
+  }
+  .btn-1{
+   color: var(--Bright-orange);
+  }
+  .btn-2{
+    color: var(--Dark-cyan);
+  }
+  .btn-3{
+    color: var(--Very-dark-cyan);
+  }
+  button:hover{
+    border:2px solid var(--Very-light-gray);
+    cursor:pointer;
+    background-color: transparent;
+    color:var(--Very-light-gray);
+  }
+@media only screen and (max-width:600px) {
+ 
+  .container{
+    margin:10px 0px;
+    height:auto;
+    flex-direction:column;
+  }
+  .box{
+    max-width: 300px;
+   border-radius:0 !important;
+   height:400px !important;
+    padding:40px;
+  }
+  .box:nth-child(1){
+   
+    border-top-right-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+    }
+  
+  .box:nth-child(3){
+  
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    
+    }
+  p{
+    color:var(--Transparent-white);
+    font-family:'Lexend deca';
+    
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
