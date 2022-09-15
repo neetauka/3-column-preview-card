@@ -61,7 +61,7 @@ html:focus-within {
 
 /* Set core body defaults */
 .attribution { 
-
+margin-bottom: 10px;;
   font-size: 11px; 
   text-align: center; 
 }
